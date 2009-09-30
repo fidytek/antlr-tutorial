@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Instalacja krok po kroku
+title: Instalacja w trzech krokach
 ---
 
 # {{ page.title }}
