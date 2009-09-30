@@ -3,6 +3,10 @@ layout: post
 title: Instalacja w trzech krokach
 ---
 
+<blockquote>
+<img src="../../../../images/antlr.png" alt="[ANTLR]" />
+</blockquote>
+
 # {{ page.title }}
 
 1\. Ze strony [ANTLR Downloads] [downloads]
@@ -10,14 +14,16 @@ pobieramy ostatnie wersje programów
 *ANTLR* i *ANTLRWorks*:
 
 * [ANTLRWorks v1.3](http://www.antlr.org/download/antlrworks-1.3.jar)
-  Version 1.3 — for Windows, Linux and Mac OS X
+  \(Version 1.3 — for Windows, Linux and Mac OS X\)
 * [ANTLR v3.2](http://www.antlr.org/download/antlr-3.2.jar)
+  \(Complete ANTLR 3.2 jar; all tools, runtime, etc…\)
 
 Ściągnięte pliki JAR kopiujemy do katalogu */usr/local/antlr/*
 
 {% highlight bash %}
 $ sudo mkdir -p /usr/local/antlr/
-$ sudo cp antlrworks-1.3.jar antlr-3.2.jar /usr/local/antlr/
+$ sudo cp antlrworks-1.3.jar antlr-3.2.jar \
+    /usr/local/antlr/
 {% endhighlight %}
 
 W pliku */etc/profile.d/local.sh*, pamiętając o wpisaniu aktualnych
@@ -63,14 +69,14 @@ ID: 'a'..'z'+ ;
 WS: (' '|'\n'|'\r')+   {$channel=HIDDEN;} ; // ignore whitespace
 {% endhighlight %}
 
-Gramatykę tą kompilujemy w taki sposób:
+Gramatykę z pliku *T.g* kompilujemy tak:
 
 {% highlight bash %}
 $ java org.antlr.Tool T.g  # => TLexer.java TParser.java T.tokens
 {% endhighlight %}
 
 Do testowania gramatyki użyjemy programu *Test.java* wywołującego regułę początkową
-`r` i czytającego tekst z *stdin*:
+`r` tej gramatyki i czytającego tekst ze *stdin*:
 
 {% highlight java %}
 import org.antlr.runtime.*;
@@ -90,9 +96,10 @@ public class Test {
 }
 {% endhighlight %}
 
-Program *Test.java* kompilujemy w następujący sposób
+Po tych przygotowaniach, kompilujemy program *Test.java*
 (wygenerowane pliki *\*.class* zostaną umieszczone w katalogu
-*classes*):
+*classes*), przechodzimy do katalogu *classes* skąd
+uruchamiamy skompilowany program:
 
 {% highlight bash %}
 $ mkdir -p classes

@@ -46,11 +46,12 @@ Wykonanie polecenia:
 
     pygmentize -L lexers
     ...
-    * css+erb, css+ruby:
-    * erb:
-    * js+erb, javascript+erb, js+ruby, javascript+ruby:
-    * rhtml, html+erb, html+ruby:
-    * xml+erb, xml+ruby
+    * antlr-java:
+        ANTLR With Java Target (filenames *.G, *.g)
+    * antlr-ruby, antlr-rb:
+        ANTLR With Ruby Target (filenames *.G, *.g)
+    * bash, sh:
+        Bash (filenames *.sh, *.ebuild, *.eclass)
     ...
 
 wypisuje listę obsługiwanych języków programowania.
