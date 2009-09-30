@@ -112,6 +112,12 @@ invoke foo
 {% endhighlight %}
 
 
+## Fedora
+
+Do czego potrzebny jest rpm *chkconfig*. Zobacz strona manuala
+*update-alternatives*.
+
+
 <!-- Linki -->
 
 [downloads]: http://www.antlr.org/download.html "ANTLR Downloads"
