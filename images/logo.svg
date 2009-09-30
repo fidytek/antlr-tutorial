@@ -54,7 +54,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -69,7 +69,7 @@
        y="111.69319"
        id="text2018"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/wbzyl/public_git/tutorials/rails3-tutorial/lib/public/images/rails3.png"
+       inkscape:export-filename="/home/wbzyl/public_git/tutorials/antlr-tutorial/images/logo.png"
        inkscape:export-xdpi="60"
        inkscape:export-ydpi="60"><tspan
          sodipodi:role="line"
@@ -83,7 +83,7 @@
        y="111.69319"
        id="text2026"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/wbzyl/public_git/tutorials/rails3-tutorial/lib/public/images/rails3.png"
+       inkscape:export-filename="/home/wbzyl/public_git/tutorials/antlr-tutorial/images/logo.png"
        inkscape:export-xdpi="60"
        inkscape:export-ydpi="60"><tspan
          sodipodi:role="line"
@@ -96,7 +96,10 @@
        x="168.90669"
        y="106.87872"
        id="text2443"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/wbzyl/public_git/tutorials/antlr-tutorial/images/logo.png"
+       inkscape:export-xdpi="60"
+       inkscape:export-ydpi="60"><tspan
          sodipodi:role="line"
          id="tspan2445"
          x="168.90669"
