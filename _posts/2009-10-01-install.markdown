@@ -16,8 +16,8 @@ pobieramy ostatnie wersje programów
 Ściągnięte pliki JAR kopiujemy do katalogu */usr/local/antlr/*
 
 {% highlight bash %}
-sudo mkdir -p /usr/local/antlr/
-sudo cp antlrworks-1.3.jar antlr-3.2.jar /usr/local/antlr/
+$ sudo mkdir -p /usr/local/antlr/
+$ sudo cp antlrworks-1.3.jar antlr-3.2.jar /usr/local/antlr/
 {% endhighlight %}
 
 W pliku */etc/profile.d/local.sh*, pamiętając o wpisaniu aktualnych
@@ -34,7 +34,7 @@ export CLASSPATH="/usr/local/antlr/antlr-3.2.jar:."
 Program ten uruchamiamy z lini poleceń w następujący sposób:
 
 {% highlight bash %}
-java -jar /usr/local/antlr/antlrworks-1.3.jar
+$ java -jar /usr/local/antlr/antlrworks-1.3.jar
 {% endhighlight %}
 
 Ponieważ nie jest to wygodne, to ułatwimy sobie uruchamianie
@@ -44,8 +44,11 @@ programu dopisując alias do pliku *~/.bashrc*:
 alias antlrworks='java -jar /usr/local/antlr/antlrworks-1.3.jar'
 {% endhighlight %}
 
-3\. Emacs v23 po wczytaniu pliku z rozszerzeniem 
-*.g* zmienia tryb na [ANTLR.Java] [emacs-antlr].
+3\. Standardowa dystrybucja Emacsa v23 zawiera plik *antlr-mode.el*.
+Oznacza to, że po wczytaniu pliku z rozszerzeniem *.g* Emacs zmienia tryb na
+[ANTLR.Java] [emacs-antlr].  Dlatego w tym kroku nic nie musimy
+robić, o ile mamy zainstalowaną ostatnią wersję Emacsa.
+
 
 ## Testowanie instalacji
 
@@ -63,7 +66,7 @@ WS: (' '|'\n'|'\r')+   {$channel=HIDDEN;} ; // ignore whitespace
 Gramatykę tą kompilujemy w taki sposób:
 
 {% highlight bash %}
-java org.antlr.Tool T.g  # => TLexer.java TParser.java T.tokens
+$ java org.antlr.Tool T.g  # => TLexer.java TParser.java T.tokens
 {% endhighlight %}
 
 Do testowania gramatyki użyjemy programu *Test.java* wywołującego regułę początkową
