@@ -61,7 +61,7 @@ robić, o ile mamy zainstalowaną ostatnią wersję Emacsa.
 Do testowania instalacji użyjemy pliku *T.g* zawierającego taką oto
 gramatykę:
 
-{% highlight antlr %}
+{% highlight antlr-java %}
 grammar T;
 /** Match things like "call foo;" */
 r : 'call' ID ';' {System.out.println("invoke "+$ID.text);} ;
@@ -114,8 +114,13 @@ invoke foo
 
 ## Fedora
 
-Do czego potrzebny jest rpm *chkconfig*. Zobacz strona manuala
-*update-alternatives*.
+Jawę instalujemy z poniższych rpm-ów:
+
+    java-1.6.0-openjdk 
+    java-1.6.0-openjdk-devel
+
+Do czego potrzebny jest rpm *chkconfig*. 
+Zobacz strona manuala *update-alternatives*.
 
 
 <!-- Linki -->
